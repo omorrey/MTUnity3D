@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Models/Gun/Gun.fbx.meta
 guid: 698b5c860b5a2a548a24bcf36f86c239
+========
+guid: 1c05aafd6ee1f984aaea348f99a29fe8
+>>>>>>>> Stashed changes:Assets/Map.fbx.meta
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
