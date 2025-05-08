@@ -7,7 +7,8 @@ public class EnemyController : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Transform playerT;
-    public int health = 10;
+    
+
 
     
     void Start()
@@ -21,7 +22,7 @@ public class EnemyController : MonoBehaviour
     {
         MoveToPlayer();
 
-        
+
         // if (health > 1)
         // {
         //     float distanceToPlayer = Vector3.Distance(transform.position, playerT.position);
@@ -45,5 +46,14 @@ public class EnemyController : MonoBehaviour
     {
 
     }
+  //частина нижче мабуть піде в скрипт з логікою кулі
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerSettings>().Damage();
+        }
+    }
+
 
 }
