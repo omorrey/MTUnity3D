@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private const float gravityScale = 9.8f, speedScale = 2f, jumpForce = 1.5f, turnSpeed = 150f;
+    private const float gravityScale = 9.8f, speedScale = 1.5f, jumpForce = 1f, turnSpeed = 150f;
     private float verticalSpeed = 0f, mouseX = 0f, mouseY = 0f, currentAngleX = 0f;
 
     private CharacterController controller;
