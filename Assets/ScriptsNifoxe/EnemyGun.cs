@@ -9,6 +9,6 @@ public class EnemyGun : MonoBehaviour
 
     public void SpawnBullet()
     {
-        Instantiate(_bulletPrefab, _pointSpawnBullet.position, transform.rotation);
+        Instantiate(_bulletPrefab, _pointSpawnBullet.position, Quaternion.identity);
     }
 }

@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class ObjectPicker : MonoBehaviour
 {
+    private PlayerGuns _playerGuns;
+    private PlayerSettings _playerSettings;
+
+    private void Start()
+    {
+        _playerGuns = GetComponent<PlayerGuns>();
+        _playerSettings = GetComponent<PlayerSettings>();
+    }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if(hit.collider.GetComponent<GunBonus>())
         {
-            GetComponent<PlayerGuns>()._defaultGun.SetActive(false);
-            GetComponent<PlayerGuns>()._bonusGun.SetActive(true);
             Destroy(hit.collider.gameObject);
+            _playerSettings.AddTimeBonusGun(40f);
         }
     }
 }

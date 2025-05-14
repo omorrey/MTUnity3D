@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class PlayerGuns : MonoBehaviour
 {
-    public GameObject _defaultGun;
-    public GameObject _bonusGun;
+    [SerializeField] private GameObject _defaultGun;
+    [SerializeField] private GameObject _bonusGun;
+
+    public void SetBonusGun()
+    {
+        _defaultGun.SetActive(false);
+        _bonusGun.SetActive(true);
+    }
+
+    public void SetDefaultGun()
+    {
+        _bonusGun.SetActive(false);
+        _defaultGun.SetActive(true);
+    }
 }
